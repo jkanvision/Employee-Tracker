@@ -1,6 +1,6 @@
 const inquirer = require("inquirer");
 const mysql2 = require("mysql2");
-// const consl = require("console_table");
+const cTable = require("console.table");
 
 // asciiart splash screen commands
 const logo = require('asciiart-logo');

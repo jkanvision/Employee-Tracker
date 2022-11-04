@@ -29,7 +29,7 @@
   &nbsp;
 ## Usage:
   To begin using Employee Tracker, open your command-line interface and run the following command:
-  >                  node index.js
+  >                  node server.js
   
 
   Follow the prompts to select the functions you want to run. 

@@ -2,8 +2,8 @@ const express = require("express");
 const mysql = require("mysql2");
 const cTable = require("console.table");
 const inquirer = require("inquirer");
-
-
+const initialQuestions = require("./index");
+const path = require("path");
 const PORT = process.env.PORT || 3001;
 
 const app = express();
@@ -19,25 +19,7 @@ const connection = mysql.createConnection(
     console.log(`Connected to the human_resources_db database.`)
   );
 
-  // asciiart splash screen commands
-const logo = require('asciiart-logo');
-const description = "Keep track of your employee data with Employee Tracker!";
-console.log(logo( {
-    name: 'Employee Tracker',
-    font: 'Standard',
-    lineChars: 8,
-    padding: 5,
-    margin: 3,
-    borderColor: 'red',
-    logoColor: 'bold-magenta',
-    textColor: 'white',
-})
-    .emptyLine()
-    .right('version 1.0.0')
-    .emptyLine()
-    .center(description)
-    .render()
-);
+
 
 app.listen(PORT, () =>
   console.log(`App listening at http://localhost:${PORT}`)

@@ -42,7 +42,7 @@
 Example screenshot:
   
 
-  ![Screenshot of questions prompted in terminal]()
+  ![Screenshot of questions prompted in terminal](./images/employee-tracker-scrnshot.png)
   &nbsp;
   &nbsp;
   
@@ -50,7 +50,7 @@ Example screenshot:
   &nbsp;
 Video Walkthrough:
 
-  [![Video walkthrough demonstrating the functionality of the application]()]()
+  [![Video walkthrough demonstrating the functionality of the application](./images/walkthru-scrnshot.png)]()
 
   &nbsp;
   &nbsp;

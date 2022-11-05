@@ -1,6 +1,7 @@
 const inquirer = require("inquirer");
 const mysql2 = require("mysql2");
 const cTable = require("console.table");
+const sqlQueries = require("./sql-queries");
 
 // asciiart splash screen commands
 const logo = require('asciiart-logo');
@@ -22,48 +23,48 @@ console.log(logo( {
     .render()
 );
 
-const initialQuestions = () => {
+const mainQuestions = () => {
     inquirer
       .prompt(
         {
             type: "list",
             message: "What would you like to do?",
-            name: "main-menu",
+            name: "main",
             choices: ["View all departments", "View all roles", "View all employees", "Add a department", "Add a role", "Add an employee", "Update an employee role"],
         }
       )
       .then((answer) => {
-        switch (answer.main-menu) {
+        switch (answer) {
             case "View all departments":
                 
-            break;
+            // break;
         
             case "View all roles":
                 
-            break;
+            // break;
 
             case "View all employees":
                 
-            break;
+            // break;
 
             case "Add a department":
-                
+                // addDept(); 
             break;
 
             case "Add a role":
                 
-            break;
+            // break;
 
             case "Add an employee":
                 
-            break;
+            // break;
 
             case "Update an employee role":
                 
-            break;
+            // break;
             
         }
       })
 };
 
-module.exports = initialQuestions();
+module.exports = mainQuestions();

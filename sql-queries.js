@@ -2,8 +2,9 @@
 // const cTable = require("console.table");
 // const inquirer = require("inquirer");
 // const mainQuestions = require("./index");
+// const connection = require("./db/db-connection");
 
-// const addDept = () => {
+// const addDepartment = () => {
 //   inquirer
 //     .prompt(
 //       {
@@ -25,4 +26,4 @@
 
 
 
-// module.exports = addDept();
+// module.exports = addDepartment();

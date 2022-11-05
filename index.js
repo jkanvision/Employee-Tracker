@@ -2,6 +2,7 @@ const inquirer = require("inquirer");
 const mysql2 = require("mysql2");
 const cTable = require("console.table");
 const sqlQueries = require("./sql-queries");
+const connection = require("./db/db-connection");
 
 // asciiart splash screen commands
 const logo = require('asciiart-logo');
@@ -34,37 +35,40 @@ const mainQuestions = () => {
         }
       )
       .then((answer) => {
-        switch (answer) {
-            case "View all departments":
-                
-            // break;
-        
-            case "View all roles":
-                
-            // break;
+        if (answer.main === "Add an employee") {
+          addEmployee();
 
-            case "View all employees":
-                
-            // break;
+        } else if (answer.main ===  "Add a department") {
+          addDepartment();
 
-            case "Add a department":
-                // addDept(); 
-            break;
+        } else if (answer.main === "Add a role") {
+          addRole();
 
-            case "Add a role":
-                
-            // break;
+        } else if (answer.main === "Update an employee role") {
+          upDateEmployee();
 
-            case "Add an employee":
-                
-            // break;
+        } else if (answer.main === "View all departments") {
+          connection.query("SELECT * FROM department", function(err, department) {
+            console.table(department);
+            mainQuestions();
+          });
 
-            case "Update an employee role":
-                
-            // break;
-            
+        } else if (answer.main === "View all roles") {
+          connection.query("SELECT * FROM role", function(err, role) {
+            console.table(role);
+            mainQuestions();
+          });
+
+        } else if (answer.main === "View all employees") {
+          connection.query("SELECT * FROM employee", function(err, employee) {
+            console.table(employee);
+            mainQuestions();
+          });
+
         }
+        
       })
+
 };
 
 module.exports = mainQuestions();

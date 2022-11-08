@@ -51,7 +51,7 @@ Example screenshot:
   &nbsp;
 Video Walkthrough:
 
-  [![Video walkthrough demonstrating the functionality of the application](./images/walkthru-scrnshot.png)](https://watch.screencastify.com/v/mDUgY7x1kCMbPTKj8b0W)
+  [![Video walkthrough demonstrating the functionality of the application](./images/walkthru-scrnshot.png)](https://watch.screencastify.com/v/YEGACjyAvJSkJapv4Tj1)
 
   &nbsp;
   &nbsp;

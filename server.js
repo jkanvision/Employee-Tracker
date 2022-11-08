@@ -5,7 +5,7 @@ const cTable = require("console.table");
 const inquirer = require("inquirer");
 const path = require("path");
 const mainQuestions = require("./index");
-const queries = require("./sql-queries");
+const questions = require("./add-questions");
 const connection = require("./db/db-connection");
 
 // select port

@@ -1,7 +1,7 @@
 const inquirer = require("inquirer");
 const mysql2 = require("mysql2");
 const cTable = require("console.table");
-const sqlQueries = require("./sql-queries");
+const questions = require("./add-questions");
 const connection = require("./db/db-connection");
 
 // asciiart splash screen commands
@@ -24,7 +24,7 @@ console.log(logo( {
     .render()
 );
 
-const mainQuestions = () => {
+function mainQuestions() {
     inquirer
       .prompt(
         {

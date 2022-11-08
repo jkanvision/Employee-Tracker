@@ -6,8 +6,12 @@ const inquirer = require("inquirer");
 
 // arrays for list-type questions
 const deptArr = ["marketing", "sales", "distribution", "billing"];
+
 const roleArr =["advertising-manager", "sales-manager", "distribution-manager", "collections-manager", "copy-writer", "salesperson", "driver", "dispatcher", "collections-rep"];
+
 const managerArr =["Deborah Gonsalves", "Gerald Henson", "Lynn Ybor", "Terry Babson"];
+
+const empArr = ["Charlie Dixon", "Danielle Tindel", "Jack Kane", "Marley Grossman", "Fred Flintstone", "Constantine Georgopolis", "Crystal Kennedy", "Jane Perkins", "Leanne Hedey", "Jessica Rollins", "Melissa Golojuch"];
 
 // inquirer questions to add new department
 const deptQuest = [
@@ -67,6 +71,23 @@ const empQuest = [
 
 ];
 
+// inquirer questions to update an employee's role
+const updateQuest = [
+  {
+    type: "list",
+    message: "Please select an employee.",
+    name: "emp",
+    choices: empArr,
+  },
+  {
+    type: "list",
+    message: "Please select the employee's new role.",
+    name: "updRole",
+    choices: roleArr,
+  },
+
+];
 
 
-module.exports = {deptQuest, roleQuest, empQuest, deptArr, roleArr}; 
+
+module.exports = {deptQuest, roleQuest, empQuest, updateQuest, deptArr, roleArr, managerArr, empArr}; 

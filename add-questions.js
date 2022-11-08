@@ -1,8 +1,4 @@
-// const mysql = require("mysql2");
-// const cTable = require("console.table");
 const inquirer = require("inquirer");
-// const mainQuestions = require("./index");
-// const connection = require("./db/db-connection");
 
 // arrays for list-type questions
 const deptArr = ["marketing", "sales", "distribution", "billing"];

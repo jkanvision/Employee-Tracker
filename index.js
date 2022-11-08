@@ -4,8 +4,12 @@ const cTable = require("console.table");
 const deptQuest = require("./add-questions");
 const roleQuest = require("./add-questions");
 const empQuest = require("./add-questions");
+const updateQuest = require("./add-questions");
+
 const deptArr = require("./add-questions");
 const roleArr = require("./add-questions");
+const managerArr = require("./add-questions");
+const empArr = require("./add-questions");
 const connection = require("./db/db-connection");
 
 // asciiart splash screen commands
@@ -115,5 +119,14 @@ const addEmployee = () => {
     });
   
 };
+
+// function to run update employee role questions
+const upDateEmployee = () => {
+  inquirer
+    .prompt(updateQuest)
+    .then((answers) => {
+      mainQuestions();
+    });
+}
 
 module.exports = mainQuestions();

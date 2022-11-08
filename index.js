@@ -1,7 +1,11 @@
 const inquirer = require("inquirer");
 const mysql2 = require("mysql2");
 const cTable = require("console.table");
-const questions = require("./add-questions");
+const deptQuest = require("./add-questions");
+const roleQuest = require("./add-questions");
+const empQuest = require("./add-questions");
+const deptArr = require("./add-questions");
+const roleArr = require("./add-questions");
 const connection = require("./db/db-connection");
 
 // asciiart splash screen commands
@@ -69,6 +73,47 @@ function mainQuestions() {
         
       })
 
+};
+
+// function to run add department questions
+const addDepartment = () => {
+  inquirer
+    .prompt(deptQuest)
+    .then((answer) => {
+      connection.query("INSERT INTO department (department_name) VALUES (?)", answer.dept, function (err, result) {
+        console.log("${answer.dept} added to Departments");
+      });
+      deptArr.push(answer.dept);
+      mainQuestions();
+    });
+  
+};
+
+// function to run add role questions
+const addRole = () => {
+  inquirer
+    .prompt(roleQuest)
+    .then((answers) => {
+      connection.query("INSERT INTO role (title, salary, department_id) VALUES (?, ?, ?);", answers.role, answers.salary, answers.roleDept, function (err, result) {
+        console.log("${answers.role} added to Roles");
+      });
+      roleArr.push(answers.role);
+      mainQuestions();
+    });
+  
+};
+
+// function to run add employee questions
+const addEmployee = () => {
+  inquirer
+    .prompt(empQuest)
+    .then((answers) => {
+      connection.query("INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES (?, ?, ?, ?);", answers.first, answers.last, answers.empRole, answers.manager, function (err, result) {
+        console.log("${answers.first} " + "${answers.last} " + "added to Employees");
+      });
+      mainQuestions();
+    });
+  
 };
 
 module.exports = mainQuestions();

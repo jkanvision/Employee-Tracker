@@ -3,7 +3,7 @@
 # Employee Tracker
 
 ## Description: 
-  This application is a  from the command-line interface. 
+  The Employee Tracker application is a human resources management tool that runs in the command-line interface. 
   &nbsp;
   &nbsp;
 
@@ -32,7 +32,8 @@
   >                  node server.js
   
 
-  Follow the prompts to select the functions you want to run. 
+  Follow the prompts to select the functions you want to run. To exit the program: 
+  >                  ctrl + C
 <br>
   &nbsp;
   &nbsp;
@@ -50,7 +51,7 @@ Example screenshot:
   &nbsp;
 Video Walkthrough:
 
-  [![Video walkthrough demonstrating the functionality of the application](./images/walkthru-scrnshot.png)]()
+  [![Video walkthrough demonstrating the functionality of the application](./images/walkthru-scrnshot.png)](https://watch.screencastify.com/v/mDUgY7x1kCMbPTKj8b0W)
 
   &nbsp;
   &nbsp;
